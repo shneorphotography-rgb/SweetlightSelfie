@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g3)"/>
+  <circle cx="300" cy="250" r="80" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="500" cy="350" r="100" fill="rgba(255,255,255,0.2)"/>
+  <text x="400" y="450" text-anchor="middle" fill="white" font-family="Arial" font-size="28" font-weight="bold">Couple Photography</text>
+  <text x="400" y="490" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Arial" font-size="18">Sample Image 3</text>
+</svg>

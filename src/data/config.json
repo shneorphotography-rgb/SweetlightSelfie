@@ -1,0 +1,3722 @@
+{
+  "photographer": {
+    "name": "עומר שניאור",
+    "signatureName": "Omer Shneor",
+    "title": "צלם חתונות ואירועים",
+    "tagline": "מספר סיפורים דרך העדשה",
+    "logo": "/logo-clean.png",
+    "profileImage": "/portfolio-media/about/about.webp",
+    "email": "shneorphotography@gmail.com",
+    "phone": "0509334119",
+    "whatsapp": "0509334119",
+    "instagram": "https://www.instagram.com/omer_shneor_photography/",
+    "facebook": "https://facebook.com/omer.photographer",
+    "website": "https://omer-photographer.co.il"
+  },
+  "theme": {
+    "mode": "light",
+    "preset": "sand-gold",
+    "textTemplateId": "classic-editorial",
+    "headingFamily": "'Bellefair', Georgia, serif",
+    "bodyFamily": "'Heebo', sans-serif",
+    "heroTitleFamily": "'Great Vibes', cursive",
+    "typography": {
+      "headingFont": "serif",
+      "bodyFont": "sans",
+      "headingWeight": 500,
+      "bodyWeight": 300,
+      "headingLetterSpacing": "0.05em",
+      "bodyLetterSpacing": "0.02em"
+    },
+    "colors": {
+      "light": {
+        "primary": "#1C1C1C",
+        "secondary": "#5A5550",
+        "accent": "#C9A96E",
+        "accentDark": "#A8834A",
+        "accentSecondary": "#B8967E",
+        "background": "#FAFAF8",
+        "surface": "#F4F1EC",
+        "border": "#E0D9CE",
+        "text": "#1C1C1C",
+        "textMuted": "#8A8680",
+        "panelBackground": "#FCF9F4",
+        "panelBorder": "#E0D9CE",
+        "inputBackground": "#FFFFFF",
+        "inputBorder": "#D7CCBA",
+        "inputText": "#1C1C1C",
+        "inputPlaceholder": "#8A8680",
+        "buttonBackground": "#1C1C1C",
+        "buttonHoverBackground": "#A8834A",
+        "buttonText": "#FFFFFF",
+        "success": "#3E6A45",
+        "error": "#B94747"
+      },
+      "dark": {
+        "primary": "#F2EFE8",
+        "secondary": "#C8C4BC",
+        "accent": "#D4A843",
+        "accentDark": "#B88A2A",
+        "accentSecondary": "#B88A2A",
+        "background": "#111111",
+        "surface": "#1A1A1A",
+        "border": "#2E2E2E",
+        "text": "#F2EFE8",
+        "textMuted": "#9A9690",
+        "panelBackground": "#171717",
+        "panelBorder": "#3B3B3B",
+        "inputBackground": "#202020",
+        "inputBorder": "#5A5248",
+        "inputText": "#FFF8ED",
+        "inputPlaceholder": "#BBB2A5",
+        "buttonBackground": "#D4A843",
+        "buttonHoverBackground": "#E3BC64",
+        "buttonText": "#18120A",
+        "success": "#7FC985",
+        "error": "#F08B7A"
+      }
+    }
+  },
+  "layout": {
+    "type": "stories",
+    "navigation": "hamburger",
+    "sectionOrder": [
+      "hero",
+      "about",
+      "gallery",
+      "pricing",
+      "testimonials",
+      "faq",
+      "contact"
+    ],
+    "galleryAspectRatio": "auto",
+    "gridColumns": 3,
+    "masonryColumns": {
+      "desktop": 3,
+      "tablet": 2,
+      "mobile": 1
+    }
+  },
+  "sections": {
+    "hero": {
+      "enabled": true,
+      "type": "fullscreen",
+      "backgroundImage": "/portfolio-media/hero/cover-01.webp",
+      "overlay": 0.4,
+      "titleHe": "עומר שניאור",
+      "titleEn": "Omer Shneor",
+      "displayLanguage": "en",
+      "title": "Omer Shneor",
+      "transition": "dissolve",
+      "slideDuration": 5.5,
+      "transitionDuration": 1.2,
+      "contentPlacement": {
+        "desktop": {
+          "x": 50,
+          "y": 61
+        },
+        "mobile": {
+          "x": 50,
+          "y": 62
+        }
+      },
+      "logoPlacement": {
+        "desktop": {
+          "x": 50,
+          "y": 32
+        },
+        "mobile": {
+          "x": 50,
+          "y": 31
+        }
+      },
+      "textEffects": {
+        "color": "#ffffff",
+        "shadow": {
+          "enabled": true,
+          "color": "#000000",
+          "opacity": 0.34,
+          "blur": 24,
+          "x": 0,
+          "y": 8
+        },
+        "outline": {
+          "enabled": false,
+          "color": "#000000",
+          "width": 1
+        }
+      },
+      "logoStyle": {
+        "frameShape": "none",
+        "size": 132,
+        "padding": 16,
+        "backgroundColor": "#ffffff",
+        "backgroundOpacity": 0.9,
+        "borderColor": "#ffffff",
+        "borderWidth": 1,
+        "shadowEnabled": false,
+        "imageShadowEnabled": true,
+        "imageShadowColor": "#000000",
+        "imageShadowOpacity": 0.24
+      },
+      "titleFontFamily": "",
+      "logoGlowEnabled": true,
+      "logoFrameStyle": "none",
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": ""
+      },
+      "showTitle": true,
+      "showTagline": true,
+      "scrollIndicator": true,
+      "imagePositions": {
+        "/portfolio-media/hero/cover-01.webp": "center 30%",
+        "/portfolio-media/hero/cover-02.webp": "center 32%",
+        "/portfolio-media/hero/cover-05.webp": "58% 34%",
+        "/portfolio-media/hero/cover-06.webp": "26% 24%",
+        "/portfolio-media/hero/cover-08.webp": "center 78%"
+      },
+      "images": [
+        {
+          "src": "/portfolio-media/hero/cover-01.webp",
+          "x": 0,
+          "y": -20,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-02.webp",
+          "x": 0,
+          "y": -18,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-03.webp",
+          "x": 0,
+          "y": 0,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-04.webp",
+          "x": 0,
+          "y": 0,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-05.webp",
+          "x": 8,
+          "y": -16,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-06.webp",
+          "x": -24,
+          "y": -26,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-07.webp",
+          "x": 0,
+          "y": 0,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-08.webp",
+          "x": 0,
+          "y": 28,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-09.webp",
+          "x": 0,
+          "y": 0,
+          "zoom": 1
+        },
+        {
+          "src": "/portfolio-media/hero/cover-10.webp",
+          "x": 0,
+          "y": 0,
+          "zoom": 1
+        }
+      ]
+    },
+    "about": {
+      "enabled": true,
+      "title": "קצת עליי",
+      "description": [
+        "היי, אני עומר, ואני חי ונושם צילום.",
+        "הדרך המקצועית שלי, שהחלה בתיכון והמשיכה כצלם צבאי, הובילה אותי למקום שבו הלב שלי נמצא – בחתונות.",
+        "אני מאמין שצילום טוב באמת מגיע מהיכולת לתפוס את הרגעים הכי אותנטיים שלכם, בלי פילטרים ומסכות.",
+        "יום הצילומים איתי הוא חוויה של כיף וזרימה, אני לא מגיע רק כדי לעבוד, אלא כדי להיות חלק מהיום המרגש שלכם ולתת לכם מזכרת של אהבה שתלווה אתכם לכל החיים."
+      ],
+      "image": "/portfolio-media/about/about.webp",
+      "images": [
+        {
+          "id": "about-primary",
+          "src": "/portfolio-media/about/about.webp",
+          "alt": "",
+          "frame": {
+            "x": 0,
+            "y": 0,
+            "zoom": 1
+          }
+        }
+      ],
+      "contentPosition": "start",
+      "mediaLayout": "single",
+      "mediaMask": "soft-square",
+      "maskMotion": true,
+      "statsLayout": "row",
+      "textStyle": {
+        "preset": "none",
+        "color": "",
+        "shadowEnabled": false,
+        "shadowColor": "#1A1814",
+        "shadowOpacity": 22,
+        "shadowBlur": 12,
+        "shadowX": 0,
+        "shadowY": 4,
+        "outlineEnabled": false,
+        "outlineColor": "#FAFAF8",
+        "outlineWidth": 1
+      },
+      "stats": [
+        {
+          "label": "זוגות מרוצים",
+          "value": "500+"
+        },
+        {
+          "label": "שנות ניסיון",
+          "value": "10"
+        },
+        {
+          "label": "חתונות בשנה",
+          "value": "60"
+        }
+      ],
+      "backgroundColor": "surface",
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": "",
+        "accentFamily": "",
+        "nameFamily": ""
+      }
+    },
+    "gallery": {
+      "enabled": true,
+      "title": "העבודות שלי",
+      "showFilters": true,
+      "backgroundColor": "background",
+      "columnsAll": 3,
+      "columnsFiltered": 2,
+      "moreCtaEnabled": true,
+      "moreCtaLabel": "בא לכם לראות עוד? לחצו כאן",
+      "moreCtaHref": "https://www.instagram.com/omer_shneor_photography/",
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": "",
+        "accentFamily": ""
+      }
+    },
+    "pricing": {
+      "enabled": true,
+      "eyebrow": "הצעת מחיר",
+      "title": "צילום סטילס בחתונות",
+      "intro": "יום החתונה שלכם מורכב מאלפי רגעים קטנים. אני שם כדי לתעד אותם בטבעיות, ברגישות ובלי להפריע למה שקורה באמת.",
+      "backgroundColor": "surface",
+      "addonsTitle": "שירותים שאפשר להוסיף",
+      "terms": "* מחירי השירותים הנוספים רלוונטיים בסגירת חבילת צילום הסטילס המלאה.",
+      "ctaLabel": "בואו נבדוק את התאריך שלכם",
+      "ctaHref": "#contact",
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": "",
+        "accentFamily": ""
+      },
+      "packages": [
+        {
+          "id": "wedding-stills-full",
+          "label": "החבילה המרכזית",
+          "title": "תיעוד מלא ליום החתונה",
+          "price": "7,500",
+          "currency": "₪",
+          "priceNote": "כולל מע״מ",
+          "description": "אני מלווה אתכם מהשלבים האחרונים של ההתארגנות והמפגש, ממשיך לצילומי הזוגיות בלוקיישנים שנבחר יחד, ומתעד באולם את קבלת הפנים, החתימה על הכתובה, החופה וכל מה שקורה ברחבת הריקודים.",
+          "features": [
+            "ליווי מההתארגנות והמפגש ועד סביבות 01:00",
+            "צילומי זוגיות בלוקיישנים שנבחר לפי התנאים ביום האירוע",
+            "צלם שני שמצטרף באולם לתיעוד רחב ומלא יותר",
+            "תיעוד מלא של האולם, הכתובה, החופה והמסיבה",
+            "עריכה מקצועית לכל תמונה — בחירה, צבעים וניגודיות",
+            "גלריה דיגיטלית מלאה ונוחה לשיתוף עם המשפחה והחברים",
+            "זיהוי פנים למציאה מהירה של תמונות בגלריה",
+            "פגישת Zoom אישית כחלק מתהליך סגירת האירוע"
+          ],
+          "images": [
+            "/portfolio-media/gallery/evening-weddings/01/images/001.webp",
+            "/portfolio-media/gallery/evening-weddings/01/images/002.webp"
+          ],
+          "featured": true
+        }
+      ],
+      "addons": [
+        {
+          "id": "printed-albums",
+          "title": "אלבומים מודפסים",
+          "price": "1,500",
+          "currency": "₪",
+          "priceNote": "",
+          "description": "אחרי האירוע תבחרו ותסמנו את התמונות האהובות עליכם ישירות בגלריה. אני אעצב את האלבום, אשלח אותו לאישור שלכם ואטפל בהפקה.",
+          "features": [
+            "אלבום זוגי מעוצב",
+            "שני אלבומים קטנים להורים",
+            "אישור העיצוב לפני ההדפסה"
+          ],
+          "images": [
+            "/portfolio-media/gallery/day-weddings/01/images/001.webp",
+            "/portfolio-media/gallery/day-weddings/01/images/002.webp"
+          ]
+        },
+        {
+          "id": "save-the-date",
+          "title": "צילומי זוגיות — Save The Date",
+          "price": "1,300",
+          "currency": "₪",
+          "priceNote": "",
+          "description": "נקבע יום צילום לפני החתונה ונבחר יחד מקום שמתאים לכם, כדי ליצור סט תמונות זוגיות טבעי ואישי לקראת האירוע.",
+          "features": [],
+          "images": [
+            "/portfolio-media/gallery/couples/01/images/001.webp",
+            "/portfolio-media/gallery/couples/01/images/002.webp"
+          ]
+        },
+        {
+          "id": "magnets",
+          "title": "צילום מגנטים",
+          "price": "2,600",
+          "currency": "₪",
+          "priceNote": "",
+          "description": "צוות מקצועי מטעמי מגיע לאירוע, מצלם את האורחים לאורך הערב, עורך במקום ומדפיס עבורם מגנטים באיכות גבוהה.",
+          "features": [
+            "צלם ועורך ייעודיים לאירוע",
+            "צילום טבעי שמשתלב בשפה של הגלריה",
+            "הדפסה וחלוקה לאורחים במהלך הערב"
+          ],
+          "images": [
+            "/portfolio-media/gallery/evening-weddings/02/images/001.webp",
+            "/portfolio-media/gallery/evening-weddings/02/images/002.webp"
+          ]
+        }
+      ]
+    },
+    "testimonials": {
+      "enabled": true,
+      "title": "מה אומרים עליי",
+      "backgroundColor": "surface",
+      "showStars": true,
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": "",
+        "nameFamily": ""
+      },
+      "reviews": [
+        {
+          "name": "שיר ותומר",
+          "text": "מצאנו את עומר באינסטגרם ומיד ידענו שזה מה שחיפשנו. בתור זוג שקצת חשש מהצילומים, עומר היה פשוט נסיך – הוא הבין את הקלילות שחיפשנו והפך לחלק בלתי נפרד מהאורחים שלנו. התמונות הגיעו במהירות שיא והן פשוט מעולות; עד היום אנחנו לא מצליחים לבחור לאלבום כי כולן מושלמות. ממליצים בחום!",
+          "rating": 5,
+          "image": "/portfolio-media/testimonials/shir-tomer.webp"
+        },
+        {
+          "name": "נטלי ועמרי",
+          "text": "מהשיחה הראשונה הבנו שעומר הוא הצלם שלנו. הוא מקצועי ברמות, הגיע עם לו\"ז מסודר ועשה לנו סדר בבלגן, מה שנתן לנו שקט נפשי והרגשה שיש על מי לסמוך. מעבר למקצועיות, הוא פשוט בן אדם כיפי ומרגיע. התמונות יצאו פשוט וואו – אנחנו הכי מרוצים בעולם!",
+          "rating": 5,
+          "image": "/portfolio-media/testimonials/netali-omri.webp"
+        },
+        {
+          "name": "ישראל ובת שבע",
+          "text": "הכרנו את עומר בחתונה של אחותי ומיד ידענו שהוא יצלם גם אותנו. הוא מוכשר בטירוף ויודע לתפוס תמונות טבעיות בלי לביים יותר מדי. יום הצילומים עבר באווירה משוחררת – הוא שם לנו מוזיקה, הצחיק אותנו ותקתק את הלו\"ז. עומר נשאר עד השיר האחרון וקיבלנו מעל 3,000 תמונות ברמה הכי גבוהה שיש!",
+          "rating": 5,
+          "image": "/portfolio-media/testimonials/israel-batsheva.webp"
+        },
+        {
+          "name": "אפק ומיקה",
+          "text": "הגענו לעומר במקרה וזה היה חיבור ממבט ראשון! הוא השילוב המדויק בין מקצוען לחבר וגרם לנו להרגיש הכי בנוח בעולם. התמונות היו מוכנות תוך שלושה שבועות בלבד בגלריה נוחה עם זיהוי פנים, ורואים שנעשתה עבודת עריכה מושקעת בטירוף. פשוט תסגרו איתו – הוא הספק הכי מוצלח שלקחנו בפער!",
+          "rating": 5,
+          "image": "/portfolio-media/testimonials/efek-mika.webp"
+        },
+        {
+          "name": "הדס ואביעד",
+          "text": "עומר הוא השילוב המדויק בין נעימות, רגישות ומקצועיות. מהרגע הראשון הוא נתן לנו יחס מרגיע, וביום האירוע הוא היה הכי קליל וכיפי שיש – פשוט בא עם אנרגיות טובות וידע להיות מדויק עבורנו. אנחנו פשוט עפים על התמונות! כל תמונה היא וואו אחד גדול וזה התיעוד הכי יפה שיכולנו לבקש.",
+          "rating": 5,
+          "image": "/portfolio-media/testimonials/hadas-aviad.webp"
+        },
+        {
+          "name": "עמית וענבר",
+          "text": "עומר היה אלוף מהרגע הראשון! הוא תמיד גרם לנו להרגיש הכי טבעיים ורגועים, והיה בכל מקום בלי שנרגיש – תמיד ברגע ובזווית הנכונה, עם חיוך וסבלנות אינסופית. התמונות יצאו מושלמות! עומר תפס כל רגש וכל רגע קטן שהופך את היום הזה לבלתי נשכח. מקצוען אמיתי, ממליצים בלב ענק❤️",
+          "rating": 5,
+          "image": "/portfolio-media/testimonials/amit-enbar.webp"
+        }
+      ]
+    },
+    "faq": {
+      "enabled": true,
+      "title": "שאלות נפוצות",
+      "backgroundColor": "background",
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": ""
+      },
+      "questions": [
+        {
+          "question": "מה זה אומר \"צילום אותנטי\" או \"תפיסת רגעים\"?",
+          "answer": "זה אומר שאני לא רק מתעד מהצד, אלא דואג שתהיה אווירה משוחררת שבה הרגעים פשוט קורים. במקום 'לפסל' אתכם, אני מעדיף שנצחק ונזרום יחד.<br><br>כשאתם מרגישים בנוח, החיוכים האמיתיים יוצאים מעצמם – ואני שם כדי לתפוס אותם."
+        },
+        {
+          "question": "כמה זמן נמשך יום הצילומים?",
+          "answer": "יום צילום חתונה כולל עד 12 שעות ליווי. אני מגיע כחצי שעה לפני סיום ההתארגנות ונשאר אתכם עד השעות הקטנות (בדרך כלל עד 01:30 בלילה). בחתונות שישי, אני איתכם עד שעה לפני כניסת השבת."
+        },
+        {
+          "question": "כמה צלמים מגיעים לאירוע?",
+          "answer": "צוות הסטילס כולל אותי וצלם שני מיומן שמצטרף במהלך האירוע, כדי להבטיח כיסוי מלא מכל הזוויות. בנוסף, ניתן להוסיף שירות מגנטים מקצועי שמגיע ל-5 שעות של תיעוד חווייתי לאורחים."
+        },
+        {
+          "question": "האם אתה מציע גם שירותי וידאו?",
+          "answer": "אני מתמקד בסטילס, אבל עובד עם נבחרת של צלמי וידאו מוכשרים שאני סומך עליהם בעיניים עצומות. לאחר שנוודא שהם פנויים בתאריך שלכם, אשלח לכם הצעות מחיר מסודרות יחד עם דוגמאות לעבודות שלהם, כדי שתוכלו לבחור את מי שהכי מתחבר לסגנון שלכם."
+        },
+        {
+          "question": "איך מקבלים את התמונות?",
+          "answer": "התמונות עולות לגלריה דיגיטלית מעוצבת ונוחה, המחולקת לפי שלבי האירוע. הגלריה כוללת פיצ'ר חכם של זיהוי פנים: האורחים שלכם יכולים להעלות סלפי מהיר, והמערכת תמצא עבורם באופן אוטומטי את כל התמונות שבהן הם מופיעים. פשוט, אלגנטי וחוסך המון זמן."
+        },
+        {
+          "question": "מה לגבי אלבומים מודפסים?",
+          "answer": "אני מציע שירות של עיצוב והפקת אלבומים באיכות גבוהה. אחרי שתקבלו את הגלריה, תוכלו לסמן בה את התמונות שתרצו לאלבום. אני אדאג לעיצוב, אשלח לכם לאישור לפני ההדפסה, והאלבום המוכן יגיע אליכם הביתה."
+        },
+        {
+          "question": "מתי מקבלים את התמונות?",
+          "answer": "הגלריה המלאה והערוכה תהיה מוכנה עבורכם תוך 4 עד 6 שבועות מהאירוע. חשוב לי שכל תמונה תעבור עריכה קפדנית ותקבל את מלוא תשומת הלב, כדי שתקבלו את התוצאה הכי טובה שיש ובזמן המהיר ביותר."
+        }
+      ]
+    },
+    "contact": {
+      "enabled": true,
+      "title": "בואו נדבר",
+      "subtitle": "רוצים לשמוע עוד? מלאו את הפרטים ואחזור אליכם תוך 24 שעות",
+      "showWhatsApp": true,
+      "backgroundColor": "surface",
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": ""
+      }
+    },
+    "custom1": {
+      "id": "custom1",
+      "kind": "custom",
+      "created": false,
+      "enabled": false,
+      "navLabel": "אישי 1",
+      "eyebrow": "",
+      "title": "",
+      "text": "",
+      "images": [],
+      "layout": "split",
+      "imageSide": "end",
+      "textAlign": "right",
+      "backgroundColor": "background",
+      "desktopPosition": {
+        "contentX": 0,
+        "contentY": 0,
+        "mediaX": 0,
+        "mediaY": 0
+      },
+      "mobilePosition": {
+        "contentX": 0,
+        "contentY": 0,
+        "mediaX": 0,
+        "mediaY": 0
+      },
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": ""
+      }
+    },
+    "custom2": {
+      "id": "custom2",
+      "kind": "custom",
+      "created": false,
+      "enabled": false,
+      "navLabel": "אישי 2",
+      "eyebrow": "",
+      "title": "",
+      "text": "",
+      "images": [],
+      "layout": "split",
+      "imageSide": "end",
+      "textAlign": "right",
+      "backgroundColor": "background",
+      "desktopPosition": {
+        "contentX": 0,
+        "contentY": 0,
+        "mediaX": 0,
+        "mediaY": 0
+      },
+      "mobilePosition": {
+        "contentX": 0,
+        "contentY": 0,
+        "mediaX": 0,
+        "mediaY": 0
+      },
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": ""
+      }
+    },
+    "custom3": {
+      "id": "custom3",
+      "kind": "custom",
+      "created": false,
+      "enabled": false,
+      "navLabel": "אישי 3",
+      "eyebrow": "",
+      "title": "",
+      "text": "",
+      "images": [],
+      "layout": "split",
+      "imageSide": "end",
+      "textAlign": "right",
+      "backgroundColor": "background",
+      "desktopPosition": {
+        "contentX": 0,
+        "contentY": 0,
+        "mediaX": 0,
+        "mediaY": 0
+      },
+      "mobilePosition": {
+        "contentX": 0,
+        "contentY": 0,
+        "mediaX": 0,
+        "mediaY": 0
+      },
+      "typography": {
+        "headingFamily": "",
+        "bodyFamily": ""
+      }
+    }
+  },
+  "sharing": {
+    "clientMessage": {
+      "mode": "default",
+      "customMessage": ""
+    }
+  },
+  "galleryItems": [
+    {
+      "id": 1,
+      "title": "אפק ומיקה",
+      "category": "חתונות ערב",
+      "coverImage": "/portfolio-media/gallery/evening-weddings/01/images/034.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת ערב של אפק ומיקה",
+      "images": [
+        "/portfolio-media/gallery/evening-weddings/01/images/001.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/002.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/003.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/004.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/005.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/006.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/007.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/008.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/009.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/010.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/011.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/012.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/013.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/014.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/015.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/016.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/017.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/018.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/019.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/020.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/021.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/022.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/023.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/024.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/025.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/026.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/027.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/028.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/029.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/030.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/031.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/032.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/033.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/034.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/035.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/036.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/037.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/038.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/039.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/040.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/041.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/042.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/043.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/044.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/045.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/046.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/047.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/048.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/049.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/050.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/051.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/052.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/053.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/054.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/055.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/056.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/057.webp",
+        "/portfolio-media/gallery/evening-weddings/01/images/058.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/evening-weddings/01/images/034.webp",
+        "method": "faces",
+        "x": 64.816,
+        "y": 19.105,
+        "safeArea": {
+          "left": 48.462,
+          "top": 0,
+          "right": 81.17,
+          "bottom": 42.894
+        },
+        "width": 2200,
+        "height": 1466,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/evening-weddings/01/images/001.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/002.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/003.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/004.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/005.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/006.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/007.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/008.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/009.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/010.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/011.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/012.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/013.webp": {
+          "width": 1475,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/014.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/015.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/016.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/017.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/018.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/019.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/020.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/021.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/022.webp": {
+          "width": 1495,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/023.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/024.webp": {
+          "width": 1480,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/025.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/026.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/027.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/028.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/029.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/030.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/031.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/032.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/033.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/034.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/035.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/036.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/037.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/038.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/039.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/040.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/041.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/042.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/043.webp": {
+          "width": 1481,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/044.webp": {
+          "width": 1465,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/045.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/046.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/047.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/048.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/049.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/050.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/051.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/052.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/053.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/054.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/055.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/056.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/057.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/01/images/058.webp": {
+          "width": 2200,
+          "height": 1466
+        }
+      },
+      "galleryKey": "evening-weddings/אפק ומיקה",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/evening-weddings/01/images/034.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/evening-weddings/01/images/034.webp",
+          "method": "faces",
+          "x": 64.816,
+          "y": 19.105,
+          "safeArea": {
+            "left": 48.462,
+            "top": 0,
+            "right": 81.17,
+            "bottom": 42.894
+          },
+          "width": 2200,
+          "height": 1466,
+          "faceCount": 2
+        },
+        "score": 0.9401,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/evening-weddings/01/images/008.webp"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "title": "טל וגיל",
+      "category": "חתונות ערב",
+      "coverImage": "/portfolio-media/gallery/evening-weddings/02/images/011.webp",
+      "coverPosition": "72% 18%",
+      "description": "חתונת ערב של טל וגיל",
+      "images": [
+        "/portfolio-media/gallery/evening-weddings/02/images/001.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/002.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/003.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/004.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/005.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/006.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/007.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/008.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/009.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/010.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/011.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/012.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/013.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/014.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/015.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/016.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/017.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/018.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/019.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/020.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/021.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/022.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/023.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/024.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/025.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/026.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/027.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/028.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/029.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/030.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/031.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/032.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/033.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/034.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/035.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/036.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/037.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/038.webp",
+        "/portfolio-media/gallery/evening-weddings/02/images/039.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/evening-weddings/02/images/011.webp",
+        "method": "faces",
+        "x": 58.09,
+        "y": 22.603,
+        "safeArea": {
+          "left": 37.747,
+          "top": 2.41,
+          "right": 78.433,
+          "bottom": 41.355
+        },
+        "width": 2200,
+        "height": 1466,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/evening-weddings/02/images/001.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/002.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/003.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/004.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/005.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/006.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/007.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/008.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/009.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/010.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/011.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/012.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/013.webp": {
+          "width": 1464,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/014.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/015.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/016.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/017.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/018.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/019.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/020.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/021.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/022.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/023.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/024.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/025.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/026.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/027.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/028.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/029.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/030.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/031.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/032.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/033.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/034.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/035.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/036.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/037.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/038.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/02/images/039.webp": {
+          "width": 2200,
+          "height": 1464
+        }
+      },
+      "galleryKey": "evening-weddings/טל וגיל",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/evening-weddings/02/images/011.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/evening-weddings/02/images/011.webp",
+          "method": "faces",
+          "x": 58.09,
+          "y": 22.603,
+          "safeArea": {
+            "left": 37.747,
+            "top": 2.41,
+            "right": 78.433,
+            "bottom": 41.355
+          },
+          "width": 2200,
+          "height": 1466,
+          "faceCount": 2
+        },
+        "score": 0.9355,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/evening-weddings/02/images/014.webp"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "title": "מעיין ויובל",
+      "category": "חתונות ערב",
+      "coverImage": "/portfolio-media/gallery/evening-weddings/03/images/028.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת ערב של מעיין ויובל",
+      "images": [
+        "/portfolio-media/gallery/evening-weddings/03/images/001.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/002.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/003.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/004.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/005.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/006.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/007.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/008.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/009.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/010.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/011.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/012.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/013.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/014.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/015.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/016.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/017.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/018.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/019.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/020.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/021.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/022.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/023.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/024.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/025.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/026.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/027.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/028.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/029.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/030.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/031.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/032.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/033.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/034.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/035.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/036.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/037.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/038.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/039.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/040.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/041.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/042.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/043.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/044.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/045.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/046.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/047.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/048.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/049.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/050.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/051.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/052.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/053.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/054.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/055.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/056.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/057.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/058.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/059.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/060.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/061.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/062.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/063.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/064.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/065.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/066.webp",
+        "/portfolio-media/gallery/evening-weddings/03/images/067.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/evening-weddings/03/images/028.webp",
+        "method": "faces",
+        "x": 50.012,
+        "y": 26.103,
+        "safeArea": {
+          "left": 25.192,
+          "top": 0,
+          "right": 74.832,
+          "bottom": 57.176
+        },
+        "width": 2200,
+        "height": 1467,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/evening-weddings/03/images/001.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/002.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/003.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/004.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/005.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/006.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/007.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/008.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/009.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/010.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/011.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/012.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/013.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/014.webp": {
+          "width": 2200,
+          "height": 1465
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/015.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/016.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/017.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/018.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/019.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/020.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/021.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/022.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/023.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/024.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/025.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/026.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/027.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/028.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/029.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/030.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/031.webp": {
+          "width": 1469,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/032.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/033.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/034.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/035.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/036.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/037.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/038.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/039.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/040.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/041.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/042.webp": {
+          "width": 1473,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/043.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/044.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/045.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/046.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/047.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/048.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/049.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/050.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/051.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/052.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/053.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/054.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/055.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/056.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/057.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/058.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/059.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/060.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/061.webp": {
+          "width": 2061,
+          "height": 1374
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/062.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/063.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/064.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/065.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/066.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/03/images/067.webp": {
+          "width": 2200,
+          "height": 1465
+        }
+      },
+      "galleryKey": "evening-weddings/מעיין ויובל",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/evening-weddings/03/images/028.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/evening-weddings/03/images/028.webp",
+          "method": "faces",
+          "x": 50.012,
+          "y": 26.103,
+          "safeArea": {
+            "left": 25.192,
+            "top": 0,
+            "right": 74.832,
+            "bottom": 57.176
+          },
+          "width": 2200,
+          "height": 1467,
+          "faceCount": 2
+        },
+        "score": 0.9696,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/evening-weddings/03/images/012.webp"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "title": "נטלי ועמרי",
+      "category": "חתונות ערב",
+      "coverImage": "/portfolio-media/gallery/evening-weddings/04/images/017.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת ערב של נטלי ועמרי",
+      "images": [
+        "/portfolio-media/gallery/evening-weddings/04/images/001.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/002.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/003.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/004.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/005.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/006.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/007.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/008.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/009.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/010.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/011.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/012.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/013.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/014.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/015.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/016.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/017.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/018.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/019.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/020.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/021.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/022.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/023.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/024.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/025.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/026.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/027.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/028.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/029.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/030.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/031.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/032.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/033.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/034.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/035.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/036.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/037.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/038.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/039.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/040.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/041.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/042.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/043.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/044.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/045.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/046.webp",
+        "/portfolio-media/gallery/evening-weddings/04/images/047.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/evening-weddings/04/images/017.webp",
+        "method": "faces",
+        "x": 41.108,
+        "y": 27.005,
+        "safeArea": {
+          "left": 24.716,
+          "top": 0,
+          "right": 57.499,
+          "bottom": 57.565
+        },
+        "width": 2200,
+        "height": 1464,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/evening-weddings/04/images/001.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/002.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/003.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/004.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/005.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/006.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/007.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/008.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/009.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/010.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/011.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/012.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/013.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/014.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/015.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/016.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/017.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/018.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/019.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/020.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/021.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/022.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/023.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/024.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/025.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/026.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/027.webp": {
+          "width": 1464,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/028.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/029.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/030.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/031.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/032.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/033.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/034.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/035.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/036.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/037.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/038.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/039.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/040.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/041.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/042.webp": {
+          "width": 2200,
+          "height": 1465
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/043.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/044.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/045.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/046.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/evening-weddings/04/images/047.webp": {
+          "width": 2200,
+          "height": 1466
+        }
+      },
+      "galleryKey": "evening-weddings/נטלי ועמרי",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/evening-weddings/04/images/017.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/evening-weddings/04/images/017.webp",
+          "method": "faces",
+          "x": 41.108,
+          "y": 27.005,
+          "safeArea": {
+            "left": 24.716,
+            "top": 0,
+            "right": 57.499,
+            "bottom": 57.565
+          },
+          "width": 2200,
+          "height": 1464,
+          "faceCount": 2
+        },
+        "score": 0.7961,
+        "algorithm": "dominant-recurring-pair-soft",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/evening-weddings/04/images/009.webp",
+          "/portfolio-media/gallery/evening-weddings/04/images/004.webp"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "title": "דנה ונדב",
+      "category": "חתונות צהריים",
+      "coverImage": "/portfolio-media/gallery/day-weddings/01/images/014.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת צהריים של דנה ונדב",
+      "images": [
+        "/portfolio-media/gallery/day-weddings/01/images/001.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/002.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/003.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/004.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/005.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/006.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/007.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/008.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/009.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/010.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/011.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/012.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/013.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/014.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/015.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/016.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/017.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/018.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/019.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/020.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/021.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/022.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/023.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/024.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/025.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/026.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/027.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/028.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/029.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/030.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/031.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/032.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/033.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/034.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/035.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/036.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/037.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/038.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/039.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/040.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/041.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/042.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/043.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/044.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/045.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/046.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/047.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/048.webp",
+        "/portfolio-media/gallery/day-weddings/01/images/049.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/day-weddings/01/images/014.webp",
+        "method": "faces",
+        "x": 53.524,
+        "y": 33.307,
+        "safeArea": {
+          "left": 36.265,
+          "top": 5.933,
+          "right": 70.783,
+          "bottom": 58.893
+        },
+        "width": 2200,
+        "height": 1467,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/day-weddings/01/images/001.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/002.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/003.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/004.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/005.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/006.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/007.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/008.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/009.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/010.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/011.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/012.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/013.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/014.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/015.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/016.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/017.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/018.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/019.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/020.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/021.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/022.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/023.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/024.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/025.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/026.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/027.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/028.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/029.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/030.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/031.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/032.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/033.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/034.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/035.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/036.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/037.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/038.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/039.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/040.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/041.webp": {
+          "width": 1464,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/042.webp": {
+          "width": 1464,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/043.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/044.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/045.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/046.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/047.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/048.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/01/images/049.webp": {
+          "width": 2200,
+          "height": 1464
+        }
+      },
+      "galleryKey": "day-weddings/דנה ונדב",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/day-weddings/01/images/014.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/day-weddings/01/images/014.webp",
+          "method": "faces",
+          "x": 53.524,
+          "y": 33.307,
+          "safeArea": {
+            "left": 36.265,
+            "top": 5.933,
+            "right": 70.783,
+            "bottom": 58.893
+          },
+          "width": 2200,
+          "height": 1467,
+          "faceCount": 2
+        },
+        "score": 0.9433,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/day-weddings/01/images/009.webp"
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "title": "דניאל וגלעד",
+      "category": "חתונות צהריים",
+      "coverImage": "/portfolio-media/gallery/day-weddings/02/images/042.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת צהריים של דניאל וגלעד",
+      "images": [
+        "/portfolio-media/gallery/day-weddings/02/images/001.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/002.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/003.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/004.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/005.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/006.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/007.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/008.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/009.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/010.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/011.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/012.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/013.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/014.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/015.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/016.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/017.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/018.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/019.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/020.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/021.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/022.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/023.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/024.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/025.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/026.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/027.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/028.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/029.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/030.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/031.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/032.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/033.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/034.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/035.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/036.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/037.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/038.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/039.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/040.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/041.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/042.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/043.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/044.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/045.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/046.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/047.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/048.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/049.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/050.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/051.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/052.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/053.webp",
+        "/portfolio-media/gallery/day-weddings/02/images/054.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/day-weddings/02/images/042.webp",
+        "method": "faces",
+        "x": 52.66,
+        "y": 27.406,
+        "safeArea": {
+          "left": 24.617,
+          "top": 0,
+          "right": 80.704,
+          "bottom": 53.827
+        },
+        "width": 2200,
+        "height": 1466,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/day-weddings/02/images/001.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/002.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/003.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/004.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/005.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/006.webp": {
+          "width": 1475,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/007.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/008.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/009.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/010.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/011.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/012.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/013.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/014.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/015.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/016.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/017.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/018.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/019.webp": {
+          "width": 1445,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/020.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/021.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/022.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/023.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/024.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/025.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/026.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/027.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/028.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/029.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/030.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/031.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/032.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/033.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/034.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/035.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/036.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/037.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/038.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/039.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/040.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/041.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/042.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/043.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/044.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/045.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/046.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/047.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/048.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/049.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/050.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/051.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/052.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/053.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/02/images/054.webp": {
+          "width": 2200,
+          "height": 1466
+        }
+      },
+      "galleryKey": "day-weddings/דניאל וגלעד",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/day-weddings/02/images/042.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/day-weddings/02/images/042.webp",
+          "method": "faces",
+          "x": 52.66,
+          "y": 27.406,
+          "safeArea": {
+            "left": 24.617,
+            "top": 0,
+            "right": 80.704,
+            "bottom": 53.827
+          },
+          "width": 2200,
+          "height": 1466,
+          "faceCount": 2
+        },
+        "score": 0.9486,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/day-weddings/02/images/014.webp"
+        ]
+      }
+    },
+    {
+      "id": 7,
+      "title": "נעה וגולן",
+      "category": "חתונות צהריים",
+      "coverImage": "/portfolio-media/gallery/day-weddings/03/images/022.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת צהריים של נעה וגולן",
+      "images": [
+        "/portfolio-media/gallery/day-weddings/03/images/001.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/002.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/003.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/004.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/005.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/006.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/007.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/008.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/009.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/010.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/011.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/012.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/013.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/014.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/015.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/016.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/017.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/018.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/019.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/020.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/021.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/022.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/023.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/024.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/025.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/026.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/027.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/028.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/029.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/030.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/031.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/032.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/033.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/034.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/035.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/036.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/037.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/038.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/039.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/040.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/041.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/042.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/043.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/044.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/045.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/046.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/047.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/048.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/049.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/050.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/051.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/052.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/053.webp",
+        "/portfolio-media/gallery/day-weddings/03/images/054.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/day-weddings/03/images/022.webp",
+        "method": "faces",
+        "x": 51.886,
+        "y": 31.678,
+        "safeArea": {
+          "left": 32.954,
+          "top": 0,
+          "right": 70.818,
+          "bottom": 66.261
+        },
+        "width": 1600,
+        "height": 1067,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/day-weddings/03/images/001.webp": {
+          "width": 1065,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/002.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/003.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/004.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/005.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/006.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/007.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/008.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/009.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/010.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/011.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/012.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/013.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/014.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/015.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/016.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/017.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/018.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/019.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/020.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/021.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/022.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/023.webp": {
+          "width": 1066,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/024.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/025.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/026.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/027.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/028.webp": {
+          "width": 1600,
+          "height": 1065
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/029.webp": {
+          "width": 1600,
+          "height": 1065
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/030.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/031.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/032.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/033.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/034.webp": {
+          "width": 1600,
+          "height": 1064
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/035.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/036.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/037.webp": {
+          "width": 1066,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/038.webp": {
+          "width": 1065,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/039.webp": {
+          "width": 1067,
+          "height": 1600
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/040.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/041.webp": {
+          "width": 1600,
+          "height": 1065
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/042.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/043.webp": {
+          "width": 1600,
+          "height": 1064
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/044.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/045.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/046.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/047.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/048.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/049.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/050.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/051.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/052.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/053.webp": {
+          "width": 1600,
+          "height": 1067
+        },
+        "/portfolio-media/gallery/day-weddings/03/images/054.webp": {
+          "width": 1600,
+          "height": 1065
+        }
+      },
+      "galleryKey": "day-weddings/נעה וגולן",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/day-weddings/03/images/022.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/day-weddings/03/images/022.webp",
+          "method": "faces",
+          "x": 51.886,
+          "y": 31.678,
+          "safeArea": {
+            "left": 32.954,
+            "top": 0,
+            "right": 70.818,
+            "bottom": 66.261
+          },
+          "width": 1600,
+          "height": 1067,
+          "faceCount": 2
+        },
+        "score": 0.9453,
+        "algorithm": "dominant-recurring-pair-soft",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/day-weddings/03/images/011.webp",
+          "/portfolio-media/gallery/day-weddings/03/images/010.webp"
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "title": "עדי ורון",
+      "category": "חתונות צהריים",
+      "coverImage": "/portfolio-media/gallery/day-weddings/04/images/015.webp",
+      "coverPosition": "center 16%",
+      "description": "חתונת צהריים של עדי ורון",
+      "images": [
+        "/portfolio-media/gallery/day-weddings/04/images/001.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/002.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/003.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/004.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/005.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/006.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/007.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/008.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/009.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/010.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/011.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/012.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/013.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/014.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/015.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/016.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/017.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/018.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/019.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/020.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/021.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/022.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/023.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/024.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/025.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/026.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/027.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/028.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/029.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/030.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/031.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/032.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/033.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/034.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/035.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/036.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/037.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/038.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/039.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/040.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/041.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/042.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/043.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/044.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/045.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/046.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/047.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/048.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/049.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/050.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/051.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/052.webp",
+        "/portfolio-media/gallery/day-weddings/04/images/053.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/day-weddings/04/images/015.webp",
+        "method": "faces",
+        "x": 50.93,
+        "y": 31.274,
+        "safeArea": {
+          "left": 35.934,
+          "top": 10.415,
+          "right": 65.926,
+          "bottom": 50.65
+        },
+        "width": 2200,
+        "height": 1466,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/day-weddings/04/images/001.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/002.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/003.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/004.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/005.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/006.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/007.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/008.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/009.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/010.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/011.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/012.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/013.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/014.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/015.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/016.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/017.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/018.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/019.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/020.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/021.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/022.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/023.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/024.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/025.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/026.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/027.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/028.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/029.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/030.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/031.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/032.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/033.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/034.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/035.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/036.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/037.webp": {
+          "width": 1478,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/038.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/039.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/040.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/041.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/042.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/043.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/044.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/045.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/046.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/047.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/048.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/049.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/050.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/051.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/052.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/day-weddings/04/images/053.webp": {
+          "width": 2200,
+          "height": 1466
+        }
+      },
+      "galleryKey": "day-weddings/עדי ורון",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/day-weddings/04/images/015.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/day-weddings/04/images/015.webp",
+          "method": "faces",
+          "x": 50.93,
+          "y": 31.274,
+          "safeArea": {
+            "left": 35.934,
+            "top": 10.415,
+            "right": 65.926,
+            "bottom": 50.65
+          },
+          "width": 2200,
+          "height": 1466,
+          "faceCount": 2
+        },
+        "score": 0.9225,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/day-weddings/04/images/012.webp"
+        ]
+      }
+    },
+    {
+      "id": 9,
+      "title": "יובל ודניאל",
+      "category": "צילומי זוגיות",
+      "coverImage": "/portfolio-media/gallery/couples/01/images/004.webp",
+      "coverPosition": "57% 18%",
+      "description": "צילומי זוגיות של יובל ודניאל",
+      "images": [
+        "/portfolio-media/gallery/couples/01/images/001.webp",
+        "/portfolio-media/gallery/couples/01/images/002.webp",
+        "/portfolio-media/gallery/couples/01/images/003.webp",
+        "/portfolio-media/gallery/couples/01/images/004.webp",
+        "/portfolio-media/gallery/couples/01/images/005.webp",
+        "/portfolio-media/gallery/couples/01/images/006.webp",
+        "/portfolio-media/gallery/couples/01/images/007.webp",
+        "/portfolio-media/gallery/couples/01/images/008.webp",
+        "/portfolio-media/gallery/couples/01/images/009.webp",
+        "/portfolio-media/gallery/couples/01/images/010.webp",
+        "/portfolio-media/gallery/couples/01/images/011.webp",
+        "/portfolio-media/gallery/couples/01/images/012.webp",
+        "/portfolio-media/gallery/couples/01/images/013.webp",
+        "/portfolio-media/gallery/couples/01/images/014.webp",
+        "/portfolio-media/gallery/couples/01/images/015.webp",
+        "/portfolio-media/gallery/couples/01/images/016.webp",
+        "/portfolio-media/gallery/couples/01/images/017.webp",
+        "/portfolio-media/gallery/couples/01/images/018.webp",
+        "/portfolio-media/gallery/couples/01/images/019.webp",
+        "/portfolio-media/gallery/couples/01/images/020.webp",
+        "/portfolio-media/gallery/couples/01/images/021.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/couples/01/images/004.webp",
+        "method": "faces",
+        "x": 46.185,
+        "y": 15.631,
+        "safeArea": {
+          "left": 25.112,
+          "top": 0.681,
+          "right": 67.259,
+          "bottom": 29.631
+        },
+        "width": 2200,
+        "height": 1467,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/couples/01/images/001.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/01/images/002.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/01/images/003.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/004.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/005.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/006.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/007.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/008.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/01/images/009.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/01/images/010.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/01/images/011.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/01/images/012.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/013.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/01/images/014.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/015.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/016.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/01/images/017.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/018.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/01/images/019.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/01/images/020.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/01/images/021.webp": {
+          "width": 2200,
+          "height": 1466
+        }
+      },
+      "galleryKey": "couples/יובל ודניאל",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/couples/01/images/004.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/couples/01/images/004.webp",
+          "method": "faces",
+          "x": 46.185,
+          "y": 15.631,
+          "safeArea": {
+            "left": 25.112,
+            "top": 0.681,
+            "right": 67.259,
+            "bottom": 29.631
+          },
+          "width": 2200,
+          "height": 1467,
+          "faceCount": 2
+        },
+        "score": 0.8848,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/couples/01/images/001.webp"
+        ]
+      }
+    },
+    {
+      "id": 10,
+      "title": "ליאור ואנדרה",
+      "category": "צילומי זוגיות",
+      "coverImage": "/portfolio-media/gallery/couples/02/images/005.webp",
+      "coverPosition": "64% 18%",
+      "description": "צילומי זוגיות של ליאור ואנדרה",
+      "images": [
+        "/portfolio-media/gallery/couples/02/images/001.webp",
+        "/portfolio-media/gallery/couples/02/images/002.webp",
+        "/portfolio-media/gallery/couples/02/images/003.webp",
+        "/portfolio-media/gallery/couples/02/images/004.webp",
+        "/portfolio-media/gallery/couples/02/images/005.webp",
+        "/portfolio-media/gallery/couples/02/images/006.webp",
+        "/portfolio-media/gallery/couples/02/images/007.webp",
+        "/portfolio-media/gallery/couples/02/images/008.webp",
+        "/portfolio-media/gallery/couples/02/images/009.webp",
+        "/portfolio-media/gallery/couples/02/images/010.webp",
+        "/portfolio-media/gallery/couples/02/images/011.webp",
+        "/portfolio-media/gallery/couples/02/images/012.webp",
+        "/portfolio-media/gallery/couples/02/images/013.webp",
+        "/portfolio-media/gallery/couples/02/images/014.webp",
+        "/portfolio-media/gallery/couples/02/images/015.webp",
+        "/portfolio-media/gallery/couples/02/images/016.webp",
+        "/portfolio-media/gallery/couples/02/images/017.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/couples/02/images/005.webp",
+        "method": "faces",
+        "x": 56.626,
+        "y": 24.556,
+        "safeArea": {
+          "left": 46.833,
+          "top": 8.899,
+          "right": 66.418,
+          "bottom": 39.068
+        },
+        "width": 2200,
+        "height": 1467,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/couples/02/images/001.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/002.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/003.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/02/images/004.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/02/images/005.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/02/images/006.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/007.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/008.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/009.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/010.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/011.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/02/images/012.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/013.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/014.webp": {
+          "width": 1464,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/015.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/016.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/02/images/017.webp": {
+          "width": 1466,
+          "height": 2200
+        }
+      },
+      "galleryKey": "couples/ליאור ואנדרה",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/couples/02/images/005.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/couples/02/images/005.webp",
+          "method": "faces",
+          "x": 56.626,
+          "y": 24.556,
+          "safeArea": {
+            "left": 46.833,
+            "top": 8.899,
+            "right": 66.418,
+            "bottom": 39.068
+          },
+          "width": 2200,
+          "height": 1467,
+          "faceCount": 2
+        },
+        "score": 0.8954,
+        "algorithm": "dominant-recurring-pair-soft",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/couples/02/images/001.webp",
+          "/portfolio-media/gallery/couples/02/images/014.webp"
+        ]
+      }
+    },
+    {
+      "id": 11,
+      "title": "עינת ודניאל",
+      "category": "צילומי זוגיות",
+      "coverImage": "/portfolio-media/gallery/couples/03/cover-new.webp",
+      "coverPosition": "center 18%",
+      "description": "צילומי זוגיות של עינת ודניאל",
+      "images": [
+        "/portfolio-media/gallery/couples/03/images/001.webp",
+        "/portfolio-media/gallery/couples/03/images/002.webp",
+        "/portfolio-media/gallery/couples/03/images/003.webp",
+        "/portfolio-media/gallery/couples/03/images/004.webp",
+        "/portfolio-media/gallery/couples/03/images/005.webp",
+        "/portfolio-media/gallery/couples/03/images/006.webp",
+        "/portfolio-media/gallery/couples/03/images/007.webp",
+        "/portfolio-media/gallery/couples/03/images/008.webp",
+        "/portfolio-media/gallery/couples/03/images/009.webp",
+        "/portfolio-media/gallery/couples/03/images/010.webp",
+        "/portfolio-media/gallery/couples/03/images/011.webp",
+        "/portfolio-media/gallery/couples/03/images/012.webp",
+        "/portfolio-media/gallery/couples/03/images/013.webp",
+        "/portfolio-media/gallery/couples/03/images/014.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/couples/03/cover-new.webp",
+        "method": "faces",
+        "x": 58.672,
+        "y": 46.743,
+        "width": 5934,
+        "height": 3948,
+        "faceCount": 1,
+        "safeArea": {
+          "left": 57.256,
+          "top": 43.384,
+          "right": 60.088,
+          "bottom": 49.748
+        }
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/couples/03/images/001.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/03/images/002.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/03/images/003.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/03/images/004.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/03/images/005.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/03/images/006.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/03/images/007.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/03/images/008.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/03/images/009.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/03/images/010.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/03/images/011.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/03/images/012.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/03/images/013.webp": {
+          "width": 2200,
+          "height": 1466
+        },
+        "/portfolio-media/gallery/couples/03/images/014.webp": {
+          "width": 1466,
+          "height": 2200
+        }
+      },
+      "galleryKey": "couples/עינת ודניאל",
+      "coverMode": "manual",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/couples/03/images/001.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/couples/03/images/001.webp",
+          "method": "faces",
+          "x": 61.155,
+          "y": 20.687,
+          "safeArea": {
+            "left": 45.349,
+            "top": 5.579,
+            "right": 76.961,
+            "bottom": 34.8
+          },
+          "width": 2200,
+          "height": 1466,
+          "faceCount": 2
+        },
+        "score": 0.9169,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": []
+      }
+    },
+    {
+      "id": 12,
+      "title": "עמית וענבר",
+      "category": "צילומי זוגיות",
+      "coverImage": "/portfolio-media/gallery/couples/04/images/008.webp",
+      "coverPosition": "center 18%",
+      "description": "צילומי זוגיות של עמית וענבר",
+      "images": [
+        "/portfolio-media/gallery/couples/04/images/001.webp",
+        "/portfolio-media/gallery/couples/04/images/002.webp",
+        "/portfolio-media/gallery/couples/04/images/003.webp",
+        "/portfolio-media/gallery/couples/04/images/004.webp",
+        "/portfolio-media/gallery/couples/04/images/005.webp",
+        "/portfolio-media/gallery/couples/04/images/006.webp",
+        "/portfolio-media/gallery/couples/04/images/007.webp",
+        "/portfolio-media/gallery/couples/04/images/008.webp",
+        "/portfolio-media/gallery/couples/04/images/009.webp",
+        "/portfolio-media/gallery/couples/04/images/010.webp",
+        "/portfolio-media/gallery/couples/04/images/011.webp",
+        "/portfolio-media/gallery/couples/04/images/012.webp",
+        "/portfolio-media/gallery/couples/04/images/013.webp",
+        "/portfolio-media/gallery/couples/04/images/014.webp",
+        "/portfolio-media/gallery/couples/04/images/015.webp",
+        "/portfolio-media/gallery/couples/04/images/016.webp",
+        "/portfolio-media/gallery/couples/04/images/017.webp",
+        "/portfolio-media/gallery/couples/04/images/018.webp"
+      ],
+      "aspectRatio": "3:2",
+      "coverFocus": {
+        "source": "/portfolio-media/gallery/couples/04/images/008.webp",
+        "method": "faces",
+        "x": 71.644,
+        "y": 30.491,
+        "safeArea": {
+          "left": 59.882,
+          "top": 7.844,
+          "right": 83.407,
+          "bottom": 51.502
+        },
+        "width": 2200,
+        "height": 1467,
+        "faceCount": 2
+      },
+      "imageMetadata": {
+        "/portfolio-media/gallery/couples/04/images/001.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/002.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/003.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/004.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/005.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/04/images/006.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/007.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/008.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/009.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/010.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/011.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/04/images/012.webp": {
+          "width": 1467,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/04/images/013.webp": {
+          "width": 1466,
+          "height": 2200
+        },
+        "/portfolio-media/gallery/couples/04/images/014.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/04/images/015.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/04/images/016.webp": {
+          "width": 2200,
+          "height": 1464
+        },
+        "/portfolio-media/gallery/couples/04/images/017.webp": {
+          "width": 2200,
+          "height": 1467
+        },
+        "/portfolio-media/gallery/couples/04/images/018.webp": {
+          "width": 2200,
+          "height": 1466
+        }
+      },
+      "galleryKey": "couples/עמית וענבר",
+      "coverMode": "auto",
+      "autoCover": {
+        "image": "/portfolio-media/gallery/couples/04/images/008.webp",
+        "focus": {
+          "source": "/portfolio-media/gallery/couples/04/images/008.webp",
+          "method": "faces",
+          "x": 71.644,
+          "y": 30.491,
+          "safeArea": {
+            "left": 59.882,
+            "top": 7.844,
+            "right": 83.407,
+            "bottom": 51.502
+          },
+          "width": 2200,
+          "height": 1467,
+          "faceCount": 2
+        },
+        "score": 0.9415,
+        "algorithm": "dominant-recurring-pair",
+        "version": 2,
+        "previousImages": [
+          "/portfolio-media/gallery/couples/04/images/001.webp"
+        ]
+      }
+    }
+  ],
+  "categories": [
+    "הכל",
+    "חתונות ערב",
+    "חתונות צהריים",
+    "צילומי זוגיות"
+  ]
+}
