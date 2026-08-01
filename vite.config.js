@@ -1,13 +1,13 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { createWriteStream, mkdirSync } from 'fs'
-import { readFile, writeFile } from 'fs/promises'
 import { join, extname } from 'path'
 import { randomBytes } from 'crypto'
 import { networkInterfaces } from 'os'
 import Busboy from 'busboy'
 import { analyzeCoupleCovers } from './scripts/couple-cover.mjs'
 import { detectCoverFocuses, toCoverFocus } from './scripts/cover-focus.mjs'
+import { createShareApiMiddleware, ShareStore } from './server/share-store.mjs'
 
 function normalizeBasePath(value) {
   const input = String(value || '/').trim()
@@ -41,10 +41,87 @@ function getLocalNetworkAddress() {
   return candidates.sort((a, b) => a.score - b.score)[0]?.address || null
 }
 
+function buildLocalClientShareUrl(req, token) {
+  const host = String(req.headers.host || 'localhost:3000')
+  const port = host.match(/:(\d+)$/)?.[1] || '3000'
+  const networkAddress = getLocalNetworkAddress()
+  const forwardedProtocol = String(req.headers['x-forwarded-proto'] || '').split(',')[0].trim()
+  const protocol = forwardedProtocol || (req.socket?.encrypted ? 'https' : 'http')
+  const origin = networkAddress
+    ? `http://${networkAddress}:${port}`
+    : `${protocol}://${host}`
+  const clientUrl = new URL(normalizeBasePath(process.env.VITE_BASE_PATH), origin)
+  clientUrl.searchParams.set('view', 'client')
+  clientUrl.searchParams.set('share', token)
+  return clientUrl.toString()
+}
+
+function isLoopbackRequest(req) {
+  const address = String(req.socket?.remoteAddress || '').toLowerCase()
+  return address === '::1'
+    || address === '127.0.0.1'
+    || address === '::ffff:127.0.0.1'
+}
+
+function denyRemoteManagement(res) {
+  res.statusCode = 403
+  res.setHeader('Content-Type', 'application/json; charset=utf-8')
+  res.setHeader('Cache-Control', 'no-store')
+  res.end(JSON.stringify({ error: 'Share management is available only on this computer' }))
+}
+
+function denyPublicShareRoute(res) {
+  res.statusCode = 404
+  res.setHeader('Content-Type', 'application/json; charset=utf-8')
+  res.setHeader('Cache-Control', 'no-store')
+  res.end(JSON.stringify({ error: 'Share link not found' }))
+}
+
+function isPublicShareToken(value) {
+  return /^[A-Za-z0-9_-]{32}$/.test(String(value || ''))
+    || /^[a-f0-9]{24}$/.test(String(value || ''))
+}
+
+function isLegacyPublicShareRead(req) {
+  if (req.method !== 'GET') return false
+  const pathname = new URL(req.url || '/', 'http://localhost').pathname
+  const segments = pathname.split('/').filter(Boolean)
+  if (segments.length === 1) return isPublicShareToken(segments[0])
+  return segments.length === 2
+    && segments[0] === 'public'
+    && isPublicShareToken(segments[1])
+}
+
 function uploadPlugin() {
   return {
     name: 'cms-upload',
     configureServer(server) {
+      const shareStore = new ShareStore({
+        directory: join(process.cwd(), '.tmp-share-center'),
+      })
+      const shareApi = createShareApiMiddleware({
+        store: shareStore,
+        storeDirectory: join(process.cwd(), '.tmp-share-center'),
+        legacyDirectory: join(process.cwd(), '.tmp-client-shares'),
+        publicUrlBuilder: buildLocalClientShareUrl,
+      })
+      const localManagementApi = (req, res, next) => (
+        isLoopbackRequest(req) ? shareApi(req, res, next) : denyRemoteManagement(res)
+      )
+      const legacyShareApi = (req, res, next) => (
+        isLegacyPublicShareRead(req)
+          ? shareApi(req, res, next)
+          : localManagementApi(req, res, next)
+      )
+      const publicShareApi = (req, res, next) => {
+        const pathname = new URL(req.url || '/', 'http://localhost').pathname
+        const segments = pathname.split('/').filter(Boolean)
+        const isPublicTokenRead = req.method === 'GET'
+          && segments.length === 1
+          && /^[A-Za-z0-9_-]{32}$/.test(segments[0])
+        return isPublicTokenRead ? shareApi(req, res, next) : denyPublicShareRoute(res)
+      }
+
       server.middlewares.use('/api/share-info', (req, res, next) => {
         if (req.method !== 'GET') return next()
 
@@ -57,74 +134,9 @@ function uploadPlugin() {
         }))
       })
 
-      server.middlewares.use('/api/client-shares', (req, res, next) => {
-        const shareDirectory = join(process.cwd(), '.tmp-client-shares')
-        const requestPath = String(req.url || '/').split('?')[0]
-
-        if (req.method === 'POST' && (requestPath === '/' || requestPath === '')) {
-          let body = ''
-          let isTooLarge = false
-
-          req.on('data', chunk => {
-            if (isTooLarge) return
-            body += chunk
-            if (Buffer.byteLength(body) > 2 * 1024 * 1024) {
-              isTooLarge = true
-              res.statusCode = 413
-              res.end(JSON.stringify({ error: 'Share payload is too large' }))
-            }
-          })
-
-          req.on('end', async () => {
-            if (isTooLarge) return
-
-            try {
-              const payload = JSON.parse(body)
-              if (!payload.config || typeof payload.config !== 'object' || Array.isArray(payload.config)) {
-                res.statusCode = 400
-                res.end(JSON.stringify({ error: 'Invalid share configuration' }))
-                return
-              }
-
-              mkdirSync(shareDirectory, { recursive: true })
-              const token = randomBytes(12).toString('hex')
-              await writeFile(
-                join(shareDirectory, `${token}.json`),
-                JSON.stringify({ createdAt: new Date().toISOString(), config: payload.config }),
-                'utf8',
-              )
-
-              res.setHeader('Content-Type', 'application/json; charset=utf-8')
-              res.setHeader('Cache-Control', 'no-store')
-              res.end(JSON.stringify({ token }))
-            } catch {
-              res.statusCode = 400
-              res.setHeader('Content-Type', 'application/json; charset=utf-8')
-              res.end(JSON.stringify({ error: 'Unable to create share link' }))
-            }
-          })
-          return
-        }
-
-        const token = requestPath.replace(/^\/+/, '')
-        if (req.method === 'GET' && /^[a-f0-9]{24}$/.test(token)) {
-          readFile(join(shareDirectory, `${token}.json`), 'utf8')
-            .then(raw => {
-              const snapshot = JSON.parse(raw)
-              res.setHeader('Content-Type', 'application/json; charset=utf-8')
-              res.setHeader('Cache-Control', 'no-store')
-              res.end(JSON.stringify({ config: snapshot.config }))
-            })
-            .catch(() => {
-              res.statusCode = 404
-              res.setHeader('Content-Type', 'application/json; charset=utf-8')
-              res.end(JSON.stringify({ error: 'Share link not found' }))
-            })
-          return
-        }
-
-        next()
-      })
+      server.middlewares.use('/api/client-shares', legacyShareApi)
+      server.middlewares.use('/api/shares', localManagementApi)
+      server.middlewares.use('/api/public-shares', publicShareApi)
 
       server.middlewares.use('/api/auto-cover', (req, res, next) => {
         if (req.method !== 'POST') return next()

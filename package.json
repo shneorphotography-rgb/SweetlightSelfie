@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "test": "node --test src/sharing/*.test.js server/*.test.mjs",
     "sync:media": "node scripts/sync-gallery.mjs",
     "sync:cover-focus": "node scripts/analyze-cover-focus.mjs",
     "sync:gallery-metadata": "node scripts/analyze-gallery-metadata.mjs",

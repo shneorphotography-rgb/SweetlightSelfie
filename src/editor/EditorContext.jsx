@@ -8,6 +8,7 @@ import {
 } from 'react';
 import defaultConfig from '../data/config.json';
 import { rebasePublicAssets } from '../utils/deployment';
+import { loadPublicShare } from '../sharing/shareRepository';
 
 const STORAGE_KEY = 'sweetlight-selfie:cms-config:v1';
 const LEGACY_STORAGE_KEY = 'cms-config';
@@ -479,15 +480,7 @@ export function EditorProvider({ children, readOnly = false, shareToken = null }
     setIsShareLoading(true);
     setShareError('');
 
-    fetch(`/api/client-shares/${encodeURIComponent(shareToken)}`, {
-      headers: { Accept: 'application/json' },
-    })
-      .then(response => {
-        if (!response.ok || !response.headers.get('content-type')?.includes('application/json')) {
-          throw new Error('Shared configuration is unavailable');
-        }
-        return response.json();
-      })
+    loadPublicShare(shareToken)
       .then(data => {
         if (!isCurrent || !data.config) return;
         const next = mergeConfig(runtimeDefaultConfig, rebasePublicAssets(data.config));

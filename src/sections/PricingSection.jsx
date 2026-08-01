@@ -8,6 +8,12 @@ function Price({ item }) {
 
   return (
     <div className="pricing-price" dir="rtl" aria-label={`${item.price} ${item.priceNote || ''}`.trim()}>
+      {item.showOriginalPrice && item.originalPrice && (
+        <span className="pricing-price-original" dir="ltr" aria-label={`מחיר קודם ${item.originalPrice}`}>
+          {item.originalCurrency && <span>{item.originalCurrency}</span>}
+          {item.originalPrice}
+        </span>
+      )}
       <span className="pricing-price-value" dir="ltr">
         {item.currency && <span className="pricing-price-currency">{item.currency}</span>}
         {item.price}

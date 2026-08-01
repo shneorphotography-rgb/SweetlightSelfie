@@ -2643,6 +2643,18 @@ body {
   white-space: nowrap;
 }
 
+.pricing-price-original {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.18em;
+  color: color-mix(in srgb, var(--color-text, #1c1c1c) 46%, transparent);
+  font-size: clamp(0.78rem, 0.9vw, 0.92rem);
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
 .pricing-price-currency {
   color: var(--color-accent-dark);
   font-size: .66em;

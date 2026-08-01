@@ -26,10 +26,9 @@ export function getClientShareToken() {
 
 export function buildClientViewUrl(origin = window.location.origin, shareToken = null) {
   const currentUrl = new URL(window.location.href);
-  const clientUrl = new URL(`${currentUrl.pathname}${currentUrl.search}`, origin);
+  const clientUrl = new URL(currentUrl.pathname, origin);
 
   clientUrl.searchParams.set(CLIENT_VIEW_PARAM, CLIENT_VIEW_VALUE);
-  clientUrl.searchParams.delete('edit');
   if (shareToken) {
     clientUrl.searchParams.set(CLIENT_SHARE_PARAM, shareToken);
   } else {

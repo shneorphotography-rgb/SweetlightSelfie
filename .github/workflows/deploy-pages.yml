@@ -35,6 +35,9 @@ jobs:
         env:
           VITE_BASE_PATH: /SweetlightSelfie/
           VITE_STATIC_PREVIEW: 'true'
+          VITE_SHARE_API_BASE_URL: ${{ vars.VITE_SHARE_API_BASE_URL }}
+          VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ vars.VITE_SUPABASE_ANON_KEY }}
       - name: Configure GitHub Pages
         uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
       - name: Upload Pages artifact
