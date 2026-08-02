@@ -2982,3 +2982,12 @@
     transition: none;
   }
 }
+
+/* Share Center headings stay in the editor's neutral Assistant voice. */
+.share-center .share-section-heading h3,
+.share-center .share-card-heading h3,
+.share-center .share-list-heading h3,
+.share-center .share-price-group-heading span,
+.share-center .share-mode-card-copy strong {
+  font-family: 'Assistant', 'Heebo', sans-serif !important;
+}
