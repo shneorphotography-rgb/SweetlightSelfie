@@ -31,7 +31,6 @@ import {
 } from 'lucide-react';
 import SweetLightLogo from '../SweetLightLogo';
 import { resolvePersonalizedPricing } from '../../sharing/pricing';
-import { FONT_OPTIONS } from '../../theme/designOptions';
 import {
   archiveShareRecord,
   createShareRecord,
@@ -75,8 +74,6 @@ const EXPIRATION_PRESETS = [
   { value: '3-months', label: '3 חודשים', months: 3 },
   { value: 'custom', label: 'תאריך מוגדר' },
 ];
-
-const SHARE_SUBHEADING_FONTS = FONT_OPTIONS.filter(font => font.supports?.includes('he'));
 
 function toDateInputValue(date) {
   if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
@@ -472,36 +469,6 @@ function MessageEditor({ message, includeText, onMessageChange, onIncludeTextCha
       <div className="share-inline-actions">
         <ActionButton Icon={Check} onClick={onSaveDefault}>שמירה כברירת המחדל שלי</ActionButton>
         <ActionButton Icon={RotateCcw} onClick={onReset}>איפוס להודעה המומלצת</ActionButton>
-      </div>
-    </section>
-  );
-}
-
-function ShareTypographyControl({ value, onChange }) {
-  return (
-    <section className="share-typography-control" aria-labelledby="share-subheading-font-title">
-      <div className="share-section-heading">
-        <div>
-          <p>עיצוב כללי</p>
-          <h3 id="share-subheading-font-title">פונט לתתי־כותרות</h3>
-          <span>תצוגה מקדימה לפני שמירה — השינוי נשמר גם בפעם הבאה.</span>
-        </div>
-        <FilePenLine size={18} aria-hidden="true" />
-      </div>
-      <div className="share-font-choice-grid" role="radiogroup" aria-label="בחירת פונט לתת־כותרות">
-        {SHARE_SUBHEADING_FONTS.map(font => (
-          <button
-            key={font.id}
-            type="button"
-            className={`share-font-choice${value === font.family ? ' is-selected' : ''}`}
-            role="radio"
-            aria-checked={value === font.family}
-            onClick={() => onChange(font.family)}
-          >
-            <strong style={{ fontFamily: font.family }}>הצעה אישית</strong>
-            <span>{font.label}</span>
-          </button>
-        ))}
       </div>
     </section>
   );
@@ -1040,8 +1007,6 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
   const [view, setView] = useState('home');
   const [message, setMessage] = useState(initialMessage.text);
   const [includeText, setIncludeText] = useState(initialMessage.includeText);
-  const initialSubheadingFont = config?.sharing?.shareUi?.subheadingFont || "'Assistant', sans-serif";
-  const [subheadingFont, setSubheadingFont] = useState(initialSubheadingFont);
   const [records, setRecords] = useState([]);
   const [generalShare, setGeneralShare] = useState(null);
   const [selectedRecord, setSelectedRecord] = useState(null);
@@ -1238,21 +1203,6 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
     }
   }, [config, generalShare, includeText, message, storageMode]);
 
-  const saveSubheadingFont = useCallback((nextFont) => {
-    setSubheadingFont(nextFont);
-    replaceConfig(current => ({
-      ...current,
-      sharing: {
-        ...(current.sharing || {}),
-        shareUi: {
-          ...(current.sharing?.shareUi || {}),
-          subheadingFont: nextFont,
-        },
-      },
-    }));
-    setNotice('הפונט לתת־הכותרות עודכן');
-  }, [replaceConfig]);
-
   const saveMessageDefaults = useCallback(() => {
     replaceConfig(current => ({
       ...current,
@@ -1366,7 +1316,6 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
       aria-modal="true"
       aria-labelledby="share-center-title"
       dir="rtl"
-      style={{ '--share-subheading-font': subheadingFont }}
     >
       <header className="share-center-header">
         <div className="share-center-brand">
@@ -1441,10 +1390,11 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
                     : storageMode === 'local-readonly'
                       ? 'עברו ל־localhost כדי ליצור ולשמור'
                       : undefined}
-                  onClick={() => setView('personal')}
+                  onClick={() => setView('create')}
                 />
               </div>
             </section>
+            {canManageShares && <RecentShares records={records} onOpenAll={() => setView('history')} onSelect={openRecord} />}
           </div>
         )}
 
@@ -1475,42 +1425,8 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
               onSaveDefault={saveMessageDefaults}
               onReset={resetRecommendedMessage}
             />
-            <ShareTypographyControl value={subheadingFont} onChange={saveSubheadingFont} />
           </div>
         )}
-
-        {canUseShareCenter && view === 'personal' && (
-          <div className="share-mode-screen">
-            <button type="button" className="share-back-button" onClick={goHome}><ArrowRight size={17} /> חזרה לבחירת מסלול</button>
-            <div className="share-view-heading">
-              <div><p>קישור מותאם אישית</p><h2>הצעות אישיות ללקוחות</h2><span>יצרו קישור נפרד לכל לקוח, עם מחיר ותיעוד שנשמרים אצלכם.</span></div>
-              <span className="share-heading-mark"><FilePenLine size={22} /></span>
-            </div>
-            <div className="share-personal-actions">
-              <button type="button" className="share-personal-action is-primary" onClick={() => setView('create')} disabled={!canManageShares}>
-                <span className="share-create-card-icon"><Plus size={21} /></span>
-                <span><strong>יצירת הצעה אישית</strong><small>{canManageShares ? 'הזינו פרטי לקוח, התאימו מחיר ושלחו.' : 'הניהול זמין דרך סביבת localhost במחשב.'}</small></span>
-                <ArrowLeft size={18} />
-              </button>
-              <button type="button" className="share-personal-action" onClick={() => setView('history')} disabled={!canManageShares}>
-                <span className="share-create-card-icon"><History size={21} /></span>
-                <span><strong>היסטוריית הצעות</strong><small>חיפוש לפי שם, תאריך, מקום וסטטוס.</small></span>
-                <ArrowLeft size={18} />
-              </button>
-            </div>
-            <MessageEditor
-              message={message}
-              includeText={includeText}
-              onMessageChange={setMessage}
-              onIncludeTextChange={setIncludeText}
-              onSaveDefault={saveMessageDefaults}
-              onReset={resetRecommendedMessage}
-            />
-            <ShareTypographyControl value={subheadingFont} onChange={saveSubheadingFont} />
-            {canManageShares && <RecentShares records={records} onOpenAll={() => setView('history')} onSelect={openRecord} />}
-          </div>
-        )}
-
 
         {canUseShareCenter && view === 'create' && (
           <CreateOfferView
