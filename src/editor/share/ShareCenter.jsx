@@ -52,6 +52,7 @@ import {
 import './share-center.css';
 
 export const DEFAULT_CLIENT_SHARE_MESSAGE = 'היי, אשמח לעמוד לשירותכם באירוע שלכם. מצרף את האתר הרשמי שלי, שבו תוכלו להתרשם מהעבודות, מחבילות הצילום ומהשירותים שאני מציע:';
+const LOCAL_WORKSPACE_URL = String(import.meta.env.VITE_LOCAL_WORKSPACE_URL || 'http://127.0.0.1:3000/');
 
 const EMPTY_CLIENT = {
   clientName: '',
@@ -432,6 +433,7 @@ function MessageEditor({ message, includeText, onMessageChange, onIncludeTextCha
 }
 
 function RecentShares({ records, onOpenAll, onSelect }) {
+  const visibleRecords = records.filter(record => record.status !== 'archived');
   return (
     <section className="share-recents" aria-labelledby="recent-shares-title">
       <div className="share-list-heading">
@@ -441,7 +443,7 @@ function RecentShares({ records, onOpenAll, onSelect }) {
         </div>
         <button type="button" onClick={onOpenAll}>לכל הלקוחות <ChevronLeft size={16} /></button>
       </div>
-      {!records.length ? (
+      {!visibleRecords.length ? (
         <div className="share-empty-state">
           <History size={22} />
           <strong>עדיין לא נוצרה הצעה אישית</strong>
@@ -449,7 +451,7 @@ function RecentShares({ records, onOpenAll, onSelect }) {
         </div>
       ) : (
         <div className="share-recent-list">
-          {records.slice(0, 4).map(record => (
+          {visibleRecords.slice(0, 4).map(record => (
             <button key={record.id} type="button" className="share-recent-row" onClick={() => onSelect(record)}>
               <span className="share-avatar">{String(record.clientName || '?').trim().slice(0, 1)}</span>
               <span className="share-recent-copy">
@@ -913,6 +915,15 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
   const restoreHistoryFocusRef = useRef(false);
   const generalUrl = useMemo(() => getGeneralClientUrl(), []);
   const canUseShareCenter = storageMode !== 'remote' || Boolean(authSession?.access_token);
+  const isReadOnlyEnvironment = storageMode === 'browser-demo' || storageMode === 'local-readonly';
+  const canManageShares = !isReadOnlyEnvironment && canUseShareCenter;
+  const storageLabel = storageMode === 'local-server'
+    ? 'נשמר במחשב'
+    : storageMode === 'remote'
+      ? 'מחובר לענן'
+      : storageMode === 'local-readonly'
+        ? 'צפייה ברשת'
+        : 'תצוגה ציבורית';
 
   useLayoutEffect(() => {
     const previousView = previousViewRef.current;
@@ -949,7 +960,7 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
   }, []);
 
   const loadGeneralShare = useCallback(async () => {
-    if (storageMode === 'browser-demo') return;
+    if (storageMode === 'browser-demo' || storageMode === 'local-readonly') return;
     try {
       const generalRecords = await listShareRecords({
         kind: 'general',
@@ -967,7 +978,7 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
     setStatusFilter('all');
     setSort('event-asc');
     setView('home');
-    if (storageMode === 'browser-demo') {
+    if (storageMode === 'browser-demo' || storageMode === 'local-readonly') {
       setRecords([]);
       setIsLoading(false);
     } else {
@@ -976,7 +987,7 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
   }, [loadRecords, storageMode]);
 
   useEffect(() => {
-    if (storageMode === 'browser-demo') {
+    if (storageMode === 'browser-demo' || storageMode === 'local-readonly') {
       setRecords([]);
       setIsLoading(false);
       return;
@@ -1017,6 +1028,12 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
     return () => window.clearTimeout(timer);
   }, [canUseShareCenter, loadRecords, query, sort, statusFilter, view]);
 
+  useEffect(() => {
+    if (!notice) return undefined;
+    const timer = window.setTimeout(() => setNotice(''), 3600);
+    return () => window.clearTimeout(timer);
+  }, [notice]);
+
   const handleSignIn = useCallback(async (email, password) => {
     const session = await signInShareUser(email, password);
     setAuthSession(session);
@@ -1035,7 +1052,11 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
 
   const publishGeneralShare = useCallback(async () => {
     if (storageMode === 'browser-demo') {
-      setNotice('יש לחבר מסד נתונים מאובטח לפני פרסום קישור כללי מותאם.');
+      setNotice('זו תצוגה ציבורית. פרסום וניהול קישורים זמינים בסביבת העבודה המקומית.');
+      return;
+    }
+    if (storageMode === 'local-readonly') {
+      setNotice('ניהול קישורים זמין רק דרך localhost במחשב שמריץ את האתר.');
       return;
     }
     setIsPublishingGeneral(true);
@@ -1184,6 +1205,7 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
           <div><small dir="ltr">SweetLight Selfie</small><strong id="share-center-title">מרכז השיתוף</strong></div>
         </div>
         <div className="share-center-header-actions">
+          <span className={`share-storage-chip is-${storageMode}`}><i /> {storageLabel}</span>
           {view !== 'home' && <button type="button" onClick={goHome}><History size={17} /> ראשי</button>}
           {storageMode === 'remote' && authSession?.access_token && (
             <button type="button" onClick={handleSignOut}><LogOut size={17} /> יציאה</button>
@@ -1195,7 +1217,16 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
       {storageMode === 'browser-demo' && (
         <div className="share-environment-note" role="status">
           <ShieldCheck size={17} />
-          <span><strong>מצב תצוגה סטטי:</strong> קישורים אישיים מושבתים כדי שלא יישלח קישור שלא יעבוד אצל הלקוח. יש לחבר את מסד הנתונים המאובטח.</span>
+          <span><strong>זו התצוגה הציבורית של האתר.</strong> קישורים אישיים נשמרים כרגע במחשב שלכם, ולכן יוצרים ומנהלים אותם בסביבת העבודה המקומית.</span>
+          <a href={LOCAL_WORKSPACE_URL} target="_blank" rel="noreferrer"><ExternalLink size={15} /> פתיחת הסביבה המקומית</a>
+        </div>
+      )}
+
+      {storageMode === 'local-readonly' && (
+        <div className="share-environment-note is-local-readonly" role="status">
+          <ShieldCheck size={17} />
+          <span><strong>האתר פתוח דרך הרשת המקומית.</strong> לקוחות יכולים לצפות בקישורים, אבל ניהול ושמירת הצעות זמינים רק ב־localhost במחשב המארח.</span>
+          <a href={LOCAL_WORKSPACE_URL} target="_blank" rel="noreferrer"><ExternalLink size={15} /> מעבר לניהול המקומי</a>
         </div>
       )}
 
@@ -1222,7 +1253,7 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
               onStatus={setNotice}
               published={Boolean(generalShare) || storageMode === 'browser-demo'}
               publishedAt={generalShare?.updatedAt || generalShare?.createdAt}
-              canPublish={storageMode !== 'browser-demo'}
+              canPublish={canManageShares}
               isPublishing={isPublishingGeneral}
               onPublish={publishGeneralShare}
             />
@@ -1230,14 +1261,20 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
               type="button"
               className="share-create-card"
               onClick={() => setView('create')}
-              disabled={storageMode === 'browser-demo'}
-              aria-describedby={storageMode === 'browser-demo' ? 'share-personal-disabled-note' : undefined}
+              disabled={!canManageShares}
+              aria-describedby={!canManageShares ? 'share-personal-disabled-note' : undefined}
             >
               <span className="share-create-card-icon"><Plus size={22} /></span>
               <span>
                 <small>קישור שנשמר עם שם, אירוע ומחירים</small>
                 <strong>יצירת הצעה אישית</strong>
-                <em id="share-personal-disabled-note">{storageMode === 'browser-demo' ? 'נדרש חיבור למסד הנתונים' : 'המחירון הכללי לא ישתנה'}</em>
+                <em id="share-personal-disabled-note">
+                  {storageMode === 'browser-demo'
+                    ? 'זמין בסביבה המקומית במחשב'
+                    : storageMode === 'local-readonly'
+                      ? 'עברו ל־localhost כדי ליצור ולשמור'
+                      : 'המחירון הכללי לא ישתנה'}
+                </em>
               </span>
               <ArrowLeft size={20} />
             </button>
@@ -1249,7 +1286,7 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
               onSaveDefault={saveMessageDefaults}
               onReset={resetRecommendedMessage}
             />
-            <RecentShares records={records} onOpenAll={() => setView('history')} onSelect={openRecord} />
+            {canManageShares && <RecentShares records={records} onOpenAll={() => setView('history')} onSelect={openRecord} />}
           </div>
         )}
 

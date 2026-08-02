@@ -93,7 +93,7 @@ function isLegacyPublicShareRead(req) {
 }
 
 function uploadPlugin() {
-  return {
+  const plugin = {
     name: 'cms-upload',
     configureServer(server) {
       const shareStore = new ShareStore({
@@ -131,6 +131,8 @@ function uploadPlugin() {
         res.setHeader('Content-Type', 'application/json; charset=utf-8')
         res.end(JSON.stringify({
           origin: networkAddress ? `http://${networkAddress}:${port}` : null,
+          localShareApi: true,
+          managementAllowed: isLoopbackRequest(req),
         }))
       })
 
@@ -255,6 +257,11 @@ function uploadPlugin() {
       })
     }
   }
+
+  // Keep the local share repository available in both `vite` and `vite preview`.
+  // The management routes remain loopback-only in either mode.
+  plugin.configurePreviewServer = plugin.configureServer
+  return plugin
 }
 
 export default defineConfig({

@@ -125,12 +125,22 @@ function sortLocalRecords(records, sort = 'event-asc') {
 }
 
 export function isShareBackendConfigured() {
-  return Boolean(API_BASE_URL) || !IS_STATIC_PREVIEW;
+  const mode = getShareStorageMode();
+  return mode === 'remote' || mode === 'local-server';
 }
 
 export function getShareStorageMode() {
   if (API_BASE_URL) return 'remote';
-  return IS_STATIC_PREVIEW ? 'browser-demo' : 'local-server';
+  if (IS_STATIC_PREVIEW) return 'browser-demo';
+  if (typeof window === 'undefined') return 'local-server';
+
+  const hostname = String(window.location.hostname || '').toLowerCase();
+  const isLoopback = hostname === 'localhost'
+    || hostname === '127.0.0.1'
+    || hostname === '[::1]'
+    || hostname === '::1';
+
+  return isLoopback ? 'local-server' : 'local-readonly';
 }
 
 export function getGeneralClientUrl() {
