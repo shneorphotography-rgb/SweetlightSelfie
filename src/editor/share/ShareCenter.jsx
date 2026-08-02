@@ -31,6 +31,7 @@ import {
 } from 'lucide-react';
 import SweetLightLogo from '../SweetLightLogo';
 import { resolvePersonalizedPricing } from '../../sharing/pricing';
+import { FONT_OPTIONS } from '../../theme/designOptions';
 import {
   archiveShareRecord,
   createShareRecord,
@@ -62,8 +63,49 @@ const EMPTY_CLIENT = {
   eventDate: '',
   venue: '',
   internalNotes: '',
+  expiresEnabled: false,
+  expirationPreset: '',
+  expirationDate: '',
   expiresAt: '',
 };
+
+const EXPIRATION_PRESETS = [
+  { value: '1-month', label: 'חודש', months: 1 },
+  { value: '2-months', label: 'חודשיים', months: 2 },
+  { value: '3-months', label: '3 חודשים', months: 3 },
+  { value: 'custom', label: 'תאריך מוגדר' },
+];
+
+const SHARE_SUBHEADING_FONTS = FONT_OPTIONS.filter(font => font.supports?.includes('he'));
+
+function toDateInputValue(date) {
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) return '';
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+function addCalendarMonths(date, months) {
+  const next = new Date(date);
+  const originalDay = next.getDate();
+  next.setDate(1);
+  next.setMonth(next.getMonth() + months);
+  const lastDay = new Date(next.getFullYear(), next.getMonth() + 1, 0).getDate();
+  next.setDate(Math.min(originalDay, lastDay));
+  return next;
+}
+
+function getExpirationDate(draft, baseDate = new Date()) {
+  if (!draft?.expiresEnabled) return '';
+  if (draft.expirationPreset === 'custom') return draft.expirationDate || '';
+  const preset = EXPIRATION_PRESETS.find(option => option.value === draft.expirationPreset);
+  return preset?.months ? toDateInputValue(addCalendarMonths(baseDate, preset.months)) : '';
+}
+
+function getTodayInputValue() {
+  return toDateInputValue(new Date());
+}
 
 const STATUS_LABELS = {
   active: 'פעיל',
@@ -109,7 +151,10 @@ function getWhatsAppHref({ message, includeText, url, phone }) {
 
 function formatDate(value, options = {}) {
   if (!value) return 'ללא תאריך';
-  const date = new Date(`${value}T12:00:00`);
+  const stringValue = String(value);
+  const date = stringValue.includes('T') || stringValue.endsWith('Z')
+    ? new Date(stringValue)
+    : new Date(`${stringValue}T12:00:00`);
   if (Number.isNaN(date.getTime())) return value;
   return new Intl.DateTimeFormat('he-IL', {
     day: '2-digit',
@@ -432,6 +477,50 @@ function MessageEditor({ message, includeText, onMessageChange, onIncludeTextCha
   );
 }
 
+function ShareTypographyControl({ value, onChange }) {
+  return (
+    <section className="share-typography-control" aria-labelledby="share-subheading-font-title">
+      <div className="share-section-heading">
+        <div>
+          <p>עיצוב כללי</p>
+          <h3 id="share-subheading-font-title">פונט לתתי־כותרות</h3>
+          <span>תצוגה מקדימה לפני שמירה — השינוי נשמר גם בפעם הבאה.</span>
+        </div>
+        <FilePenLine size={18} aria-hidden="true" />
+      </div>
+      <div className="share-font-choice-grid" role="radiogroup" aria-label="בחירת פונט לתת־כותרות">
+        {SHARE_SUBHEADING_FONTS.map(font => (
+          <button
+            key={font.id}
+            type="button"
+            className={`share-font-choice${value === font.family ? ' is-selected' : ''}`}
+            role="radio"
+            aria-checked={value === font.family}
+            onClick={() => onChange(font.family)}
+          >
+            <strong style={{ fontFamily: font.family }}>הצעה אישית</strong>
+            <span>{font.label}</span>
+          </button>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function ShareModeCard({ Icon, eyebrow, title, description, onClick, disabled, disabledNote }) {
+  return (
+    <button type="button" className={`share-mode-card${disabled ? ' is-disabled' : ''}`} onClick={onClick} disabled={disabled}>
+      <span className="share-mode-card-icon"><Icon size={22} aria-hidden="true" /></span>
+      <span className="share-mode-card-copy">
+        <small>{eyebrow}</small>
+        <strong>{title}</strong>
+        <em>{disabledNote || description}</em>
+      </span>
+      <ArrowLeft size={19} aria-hidden="true" />
+    </button>
+  );
+}
+
 function RecentShares({ records, onOpenAll, onSelect }) {
   const visibleRecords = records.filter(record => record.status !== 'archived');
   return (
@@ -517,10 +606,54 @@ function ClientDetailsStep({ value, onChange }) {
         <span>הערה פנימית</span>
         <textarea rows="3" value={value.internalNotes} onChange={event => setField('internalNotes', event.target.value)} placeholder="מידע שרק אתם תראו" />
       </label>
-      <label className="share-field">
-        <span>תוקף ההצעה</span>
-        <input type="date" value={value.expiresAt} onChange={event => setField('expiresAt', event.target.value)} />
-      </label>
+      <fieldset className="share-expiration-field share-field--wide">
+        <legend>תוקף ההצעה</legend>
+        <label className="share-expiration-toggle">
+          <input
+            type="checkbox"
+            checked={Boolean(value.expiresEnabled)}
+            onChange={event => setField('expiresEnabled', event.target.checked)}
+          />
+          <span>
+            <strong>הוספת תוקף להצעה</strong>
+            <small>אפשר לבטל בכל עת לפני שליחת הקישור.</small>
+          </span>
+        </label>
+        {value.expiresEnabled && (
+          <div className="share-expiration-panel">
+            <div className="share-expiration-options" role="radiogroup" aria-label="בחירת תוקף להצעה">
+              {EXPIRATION_PRESETS.map(option => (
+                <label key={option.value} className={`share-expiration-option${value.expirationPreset === option.value ? ' is-selected' : ''}`}>
+                  <input
+                    type="radio"
+                    name="offer-expiration"
+                    value={option.value}
+                    checked={value.expirationPreset === option.value}
+                    onChange={event => setField('expirationPreset', event.target.value)}
+                  />
+                  <span>{option.label}</span>
+                </label>
+              ))}
+            </div>
+            {value.expirationPreset === 'custom' && (
+              <label className="share-expiration-custom">
+                <span>תאריך סיום</span>
+                <input
+                  type="date"
+                  min={getTodayInputValue()}
+                  value={value.expirationDate || ''}
+                  onChange={event => setField('expirationDate', event.target.value)}
+                />
+              </label>
+            )}
+            <p className="share-expiration-preview">
+              {getExpirationDate(value)
+                ? `ההצעה תהיה בתוקף עד ${formatDate(getExpirationDate(value))}`
+                : 'בחרו תקופה או תאריך כדי להפעיל את התוקף.'}
+            </p>
+          </div>
+        )}
+      </fieldset>
     </div>
   );
 }
@@ -663,13 +796,25 @@ function CreateOfferView({ config, message, includeText, onMessageChange, onIncl
       goToStep(1);
       return;
     }
+    const expirationDate = getExpirationDate(client);
+    if (client.expiresEnabled && !expirationDate) {
+      onStatus('בחרו תקופה או תאריך כדי להוסיף תוקף להצעה.');
+      goToStep(1);
+      return;
+    }
     setIsCreating(true);
     try {
       const { resolvedConfig, resolvedPricing } = resolvePersonalizedPricing(config, pricingDraft);
       const share = await createShareRecord({
-        ...client,
+        clientName: client.clientName,
+        clientPhone: client.clientPhone,
+        clientEmail: client.clientEmail,
+        eventType: client.eventType,
+        eventDate: client.eventDate,
+        venue: client.venue,
+        internalNotes: client.internalNotes,
         label: `${client.clientName.trim()}${client.eventDate ? ` — ${formatDate(client.eventDate)}` : ''}`,
-        expiresAt: client.expiresAt ? new Date(`${client.expiresAt}T23:59:59`).toISOString() : null,
+        expiresAt: expirationDate ? new Date(`${expirationDate}T23:59:59`).toISOString() : null,
         pricingOverrides: pricingDraft,
         resolvedPricing,
         resolvedConfig,
@@ -856,7 +1001,7 @@ function ShareDetail({ record, onBack, onCopy, onDuplicate, onRevoke, onArchive 
             <div><dt>אימייל</dt><dd dir="ltr">{record.clientEmail || '—'}</dd></div>
             <div><dt>מקום</dt><dd>{record.venue || '—'}</dd></div>
             <div><dt>נוצר</dt><dd>{formatCreatedAt(record.createdAt) || '—'}</dd></div>
-            <div><dt>תוקף</dt><dd>{record.expiresAt ? formatCreatedAt(record.expiresAt) : 'ללא הגבלה'}</dd></div>
+            <div><dt>תוקף</dt><dd>{record.expiresAt ? formatDate(record.expiresAt) : 'ללא הגבלה'}</dd></div>
           </dl>
           {record.internalNotes && <div className="share-internal-note"><strong>הערה פנימית</strong><p>{record.internalNotes}</p></div>}
         </section>
@@ -895,6 +1040,8 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
   const [view, setView] = useState('home');
   const [message, setMessage] = useState(initialMessage.text);
   const [includeText, setIncludeText] = useState(initialMessage.includeText);
+  const initialSubheadingFont = config?.sharing?.shareUi?.subheadingFont || "'Assistant', sans-serif";
+  const [subheadingFont, setSubheadingFont] = useState(initialSubheadingFont);
   const [records, setRecords] = useState([]);
   const [generalShare, setGeneralShare] = useState(null);
   const [selectedRecord, setSelectedRecord] = useState(null);
@@ -1091,6 +1238,21 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
     }
   }, [config, generalShare, includeText, message, storageMode]);
 
+  const saveSubheadingFont = useCallback((nextFont) => {
+    setSubheadingFont(nextFont);
+    replaceConfig(current => ({
+      ...current,
+      sharing: {
+        ...(current.sharing || {}),
+        shareUi: {
+          ...(current.sharing?.shareUi || {}),
+          subheadingFont: nextFont,
+        },
+      },
+    }));
+    setNotice('הפונט לתת־הכותרות עודכן');
+  }, [replaceConfig]);
+
   const saveMessageDefaults = useCallback(() => {
     replaceConfig(current => ({
       ...current,
@@ -1198,7 +1360,14 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
   }, [loadRecords, query, selectedRecord, sort, statusFilter]);
 
   return (
-    <section className="share-center" role="dialog" aria-modal="true" aria-labelledby="share-center-title" dir="rtl">
+    <section
+      className="share-center"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="share-center-title"
+      dir="rtl"
+      style={{ '--share-subheading-font': subheadingFont }}
+    >
       <header className="share-center-header">
         <div className="share-center-brand">
           <span><SweetLightLogo size={36} title="SweetLight" /></span>
@@ -1242,8 +1411,49 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
         {canUseShareCenter && view === 'home' && (
           <div className="share-home-view">
             <div className="share-home-intro">
-              <div><p>שיתוף מדויק, בלי לאבד תיעוד</p><h2>מה תרצו לשלוח?</h2><span>קישור כללי לכולם, או הצעה אישית עם מחירים מותאמים.</span></div>
+              <div><p>מרכז השיתוף</p><h2>מה תרצו לשלוח?</h2><span>בחרו מסלול כדי להגיע ישר להגדרות הרלוונטיות, בלי עומס מיותר על המסך.</span></div>
               <span className="share-heading-mark"><Send size={22} /></span>
+            </div>
+            <section className="share-mode-chooser" aria-labelledby="share-mode-chooser-title">
+              <div className="share-section-heading">
+                <div>
+                  <p>בחירת מסלול</p>
+                  <h3 id="share-mode-chooser-title">איך תרצו לשתף?</h3>
+                </div>
+                <Share2 size={18} aria-hidden="true" />
+              </div>
+              <div className="share-mode-grid">
+                <ShareModeCard
+                  Icon={LinkIcon}
+                  eyebrow="קישור אחד לכולם"
+                  title="קישור קבוע"
+                  description="האתר הציבורי עם התוכן והמחירים הרגילים."
+                  onClick={() => setView('general')}
+                />
+                <ShareModeCard
+                  Icon={FilePenLine}
+                  eyebrow="הצעה עם תיעוד ומחיר"
+                  title="קישור מותאם אישית"
+                  description="הצעה פרטית עם פרטי לקוח ומחירים לבחירתכם."
+                  disabled={!canManageShares}
+                  disabledNote={storageMode === 'browser-demo'
+                    ? 'יצירת הצעה זמינה בסביבה המקומית במחשב'
+                    : storageMode === 'local-readonly'
+                      ? 'עברו ל־localhost כדי ליצור ולשמור'
+                      : undefined}
+                  onClick={() => setView('personal')}
+                />
+              </div>
+            </section>
+          </div>
+        )}
+
+        {canUseShareCenter && view === 'general' && (
+          <div className="share-mode-screen">
+            <button type="button" className="share-back-button" onClick={goHome}><ArrowRight size={17} /> חזרה לבחירת מסלול</button>
+            <div className="share-view-heading">
+              <div><p>קישור קבוע</p><h2>האתר הציבורי</h2><span>שתפו את האתר כפי שהוא — עם המחירים והתוכן הרגילים.</span></div>
+              <span className="share-heading-mark"><LinkIcon size={22} /></span>
             </div>
             <GeneralLinkCard
               url={generalShare?.publicUrl || generalUrl}
@@ -1257,27 +1467,6 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
               isPublishing={isPublishingGeneral}
               onPublish={publishGeneralShare}
             />
-            <button
-              type="button"
-              className="share-create-card"
-              onClick={() => setView('create')}
-              disabled={!canManageShares}
-              aria-describedby={!canManageShares ? 'share-personal-disabled-note' : undefined}
-            >
-              <span className="share-create-card-icon"><Plus size={22} /></span>
-              <span>
-                <small>קישור שנשמר עם שם, אירוע ומחירים</small>
-                <strong>יצירת הצעה אישית</strong>
-                <em id="share-personal-disabled-note">
-                  {storageMode === 'browser-demo'
-                    ? 'זמין בסביבה המקומית במחשב'
-                    : storageMode === 'local-readonly'
-                      ? 'עברו ל־localhost כדי ליצור ולשמור'
-                      : 'המחירון הכללי לא ישתנה'}
-                </em>
-              </span>
-              <ArrowLeft size={20} />
-            </button>
             <MessageEditor
               message={message}
               includeText={includeText}
@@ -1286,9 +1475,42 @@ export default function ShareCenter({ config, replaceConfig, onClose, closeButto
               onSaveDefault={saveMessageDefaults}
               onReset={resetRecommendedMessage}
             />
+            <ShareTypographyControl value={subheadingFont} onChange={saveSubheadingFont} />
+          </div>
+        )}
+
+        {canUseShareCenter && view === 'personal' && (
+          <div className="share-mode-screen">
+            <button type="button" className="share-back-button" onClick={goHome}><ArrowRight size={17} /> חזרה לבחירת מסלול</button>
+            <div className="share-view-heading">
+              <div><p>קישור מותאם אישית</p><h2>הצעות אישיות ללקוחות</h2><span>יצרו קישור נפרד לכל לקוח, עם מחיר ותיעוד שנשמרים אצלכם.</span></div>
+              <span className="share-heading-mark"><FilePenLine size={22} /></span>
+            </div>
+            <div className="share-personal-actions">
+              <button type="button" className="share-personal-action is-primary" onClick={() => setView('create')} disabled={!canManageShares}>
+                <span className="share-create-card-icon"><Plus size={21} /></span>
+                <span><strong>יצירת הצעה אישית</strong><small>{canManageShares ? 'הזינו פרטי לקוח, התאימו מחיר ושלחו.' : 'הניהול זמין דרך סביבת localhost במחשב.'}</small></span>
+                <ArrowLeft size={18} />
+              </button>
+              <button type="button" className="share-personal-action" onClick={() => setView('history')} disabled={!canManageShares}>
+                <span className="share-create-card-icon"><History size={21} /></span>
+                <span><strong>היסטוריית הצעות</strong><small>חיפוש לפי שם, תאריך, מקום וסטטוס.</small></span>
+                <ArrowLeft size={18} />
+              </button>
+            </div>
+            <MessageEditor
+              message={message}
+              includeText={includeText}
+              onMessageChange={setMessage}
+              onIncludeTextChange={setIncludeText}
+              onSaveDefault={saveMessageDefaults}
+              onReset={resetRecommendedMessage}
+            />
+            <ShareTypographyControl value={subheadingFont} onChange={saveSubheadingFont} />
             {canManageShares && <RecentShares records={records} onOpenAll={() => setView('history')} onSelect={openRecord} />}
           </div>
         )}
+
 
         {canUseShareCenter && view === 'create' && (
           <CreateOfferView
